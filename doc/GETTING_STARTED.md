@@ -18,10 +18,10 @@ edit code and view the results in your native OS.
 
    With these installed, you can start up the virtual machine like so:
 
-   `
+   ```
    cd /path/to/simple-transaction-service
    vagrant up
-   `
+   ```
 
    The first time you run this command, it will take some time as it needs to
    download the base disk image for the VM.
