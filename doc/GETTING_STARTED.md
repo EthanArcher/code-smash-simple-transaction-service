@@ -32,9 +32,9 @@ edit code and view the results in your native OS.
 
    Once you have logged in, you will be able to find the project code like so:
 
-   `
+   ```
    cd simple-transaction-service
-   `
+   ```
 
    You are now ready to work!
 
@@ -85,10 +85,10 @@ See the Windows guide [above](#windows)
 
 1. Install the gems:
 
-   `
+   ```
    cd /path/to/simple-transaction-service
    bundle install
-   `
+   ```
 
 2. Prepare the sqlite database:
 
