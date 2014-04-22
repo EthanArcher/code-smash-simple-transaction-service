@@ -16,7 +16,7 @@ edit code and view the results in your native OS.
 
 2. ##### Create and start the virtual machine
 
-   With these installed, you can start up the virtual machine like so:
+   With these installed, you can start up the virtual machine using PowerShell, like so:
 
    ```
    cd /path/to/simple-transaction-service
