@@ -1,0 +1,11 @@
+anguage: ruby
+rvm:
+  - 2.1.0
+cache: bundler
+
+branches:
+  only:
+    - master
+
+notifications:
+  email: false
