@@ -112,19 +112,25 @@ See the Windows guide [above](#windows)
 2. Prepare the database:
 
    ```shell
-   bundle exec rake db:migrate
+   rake db:migrate
    ```
 
 3. Start a Rails server:
 
    ```shell
-   bundle exec rails server
+   rake shopkeep:start
    ```
 
 4. Visit `http://localhost:3000` in your browser
 
    __Note:__ We have configured Vagrant to forward port 3000 on the host to the
    virtual machine, so the behaviour will be the same regardless of your setup.
+
+5. To stop the server:
+
+   ```shell
+   rake shopkeep:stop
+   ```
 
 ### Running the Tests
 
@@ -135,11 +141,11 @@ you've passed!
 
 1. Prepare the test database
 
-   `bundle exec rake db:test:prepare`
+   `rake db:test:prepare`
 
 2. Run the specs
 
-   `bundle exec rake spec`
+   `rake spec`
 
 You can read some best practice on writing specs at [Better Specs][betterspecs]
 

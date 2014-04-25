@@ -110,6 +110,7 @@ DEPENDENCIES
   haml-rails
   highlight
   jquery-rails
+  json
   rails (= 3.2.17)
   rspec-rails (~> 2.14.2)
   sqlite3

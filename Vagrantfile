@@ -12,4 +12,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   config.vm.provider "virtualbox" do |v|
     v.gui = true
   end
+
+  config.vm.provision "shell", inline: "apt-get --yes install python-pygments"
+  
 end
