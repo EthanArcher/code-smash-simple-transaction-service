@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe 'Sales API - Basic Transactions' do
+describe 'Exercise 1: Sales API - Basic Transactions' do
 
   describe 'index' do
     context 'without sales in the database' do
