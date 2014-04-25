@@ -18,8 +18,8 @@ describe 'Sales API - Basic Transactions' do
         Sale.create!(
           total: 6.00,
           items: [
-            { name: 'soft drink', amount: 1.50 },
-            { name: 'burger', amount: 4.50 }
+            { name: 'soft drink', price: 1.50 },
+            { name: 'burger', price: 4.50 }
           ]
         )
       }
@@ -28,9 +28,9 @@ describe 'Sales API - Basic Transactions' do
         Sale.create!(
           total: 9.00,
           items: [
-            { name: 'milkshake', amount: 2.50 },
-            { name: 'burger', amount: 4.50 },
-            { name: 'chips', amount: 2.00 }
+            { name: 'milkshake', price: 2.50 },
+            { name: 'burger', price: 4.50 },
+            { name: 'chips', price: 2.00 }
           ]
         )
       }
@@ -40,17 +40,17 @@ describe 'Sales API - Basic Transactions' do
           {
             'id' => first_sale.id,
             'items' => [
-              { 'name' => 'soft drink', 'amount' => 1.50 },
-              { 'name' => 'burger', 'amount' => 4.50 }
+              { 'name' => 'soft drink', 'price' => 1.50 },
+              { 'name' => 'burger', 'price' => 4.50 }
             ],
             'total' => 6.00
           },
           {
             'id' => second_sale.id,
             'items' => [
-              { 'name' => 'milkshake', 'amount' => 2.50 },
-              { 'name' => 'burger', 'amount' => 4.50 },
-              { 'name' => 'chips', 'amount' => 2.00 }
+              { 'name' => 'milkshake', 'price' => 2.50 },
+              { 'name' => 'burger', 'price' => 4.50 },
+              { 'name' => 'chips', 'price' => 2.00 }
             ],
             'total' => 9.00
           }
@@ -72,8 +72,8 @@ describe 'Sales API - Basic Transactions' do
       Sale.create(
         total: 6.00,
         items: [
-          { name: 'soft drink', amount: 1.50 },
-          { name: 'burger', amount: 4.50 }
+          { name: 'soft drink', price: 1.50 },
+          { name: 'burger', price: 4.50 }
         ]
       )
     }
@@ -83,8 +83,8 @@ describe 'Sales API - Basic Transactions' do
         'id' => sale.id,
         'total' => 6.00,
         'items' => [
-          { 'name' => 'soft drink', 'amount' => 1.50 },
-          { 'name' => 'burger', 'amount' => 4.50 }
+          { 'name' => 'soft drink', 'price' => 1.50 },
+          { 'name' => 'burger', 'price' => 4.50 }
         ]
       }
     }
@@ -103,8 +103,8 @@ describe 'Sales API - Basic Transactions' do
       post '/sales', {
         sale: {
           items: [
-            { name: 'soft drink', amount: 1.50 },
-            { name: 'burger', amount: 4.50 }
+            { name: 'soft drink', price: 1.50 },
+            { name: 'burger', price: 4.50 }
           ]
         }
       }
