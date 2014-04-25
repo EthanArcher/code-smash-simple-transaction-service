@@ -14,8 +14,8 @@
 ActiveRecord::Schema.define(:version => 20140425145318) do
 
   create_table "sales", :force => true do |t|
-    t.decimal "total"
-    t.string  "items"
+    t.float  "total"
+    t.string "items"
   end
 
 end
