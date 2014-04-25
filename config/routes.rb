@@ -1,8 +1,12 @@
 SimpleTransactionService::Application.routes.draw do
   resource :status, only: [:show], controller: 'status'
 
-  resources :simple_sales, only: [:index, :show, :create]
-  resources :modified_sales, only: [:index, :show, :create]
+  resources :sales, only: [:index, :show, :create]
+  resources :receipts, only: [:show]
+  resources :reports, only: [] do
+    get :total_sales
+    get :sales_per_item
+  end
 
   root to: 'home#index'
 end
