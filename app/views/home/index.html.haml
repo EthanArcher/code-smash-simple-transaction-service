@@ -3,3 +3,7 @@
 %p
   We have implemented a sample endpoint you can visit #{link_to 'here', status_path}
   %p
+
+%blockquote
+  = highlight_code(:ruby) { 'describe "Foo" do ; end' }.html_safe
+
