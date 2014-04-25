@@ -44,22 +44,10 @@ own copy of the application that you can work on and submit at the end of
 If you're not familiar with command-line [git][git] source control,
  GitHub have clients for both [Windows][github-windows] and [Mac OS][github-mac].
 
-#### Prepare your development environment
+#### Get your laptop ready!
 
-##### Linux
-
-If you are comfortable working in a Linux environment, you are probably good to
-go. We do strongly recommend installing [RVM][rvm] to manage Ruby versions.
-
-##### Windows / Mac OS
-
-If you are working on Windows or Mac OS, we've provided a template for a
-virtual machine pre-installed with everything you need to get going.
-
-You will need to install [Vagrant][vagrant] and [VirtualBox][virtualbox] for
-your operating system to get going.
-
-See the [Getting Started](doc/GETTING_STARTED.md) guide for more information.
+See our [Getting Started](doc/GETTING_STARTED.md) guide for more information
+on setting up your laptop as a development box; we support Windows, Macs and Linux.
 
 #### Come meet us!
 
