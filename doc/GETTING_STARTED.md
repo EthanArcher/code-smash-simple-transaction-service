@@ -1,47 +1,52 @@
 ## Getting Started
 
-### Development Tools
 Before you get started, there are a few steps you will need to take depending
-on your operating system.
+on your operating system:
+  * [Windows](#windows)
+  * [Mac](#mac)
+  * [Linux](#linux)
 
-#### Windows
-Although there are tools that allow you to work on Ruby projects natively
-on Windows, a lot of the tool chain tends to assume Linux-like behaviour, so
-we find it easier to prepare a Linux VM to run your app, allowing you to
-edit code and view the results in your native OS.
+Then you can [run your Rails app](#running_rails). 
 
-1. ##### Install VirtualBox and Vagrant
+---
+### <a name="windows"></a> Windows setup
+
+While there are tools which let you develop Rails applications on Windows,
+the standard development tools tend to assume Linux/OS X, so to make sure
+we don't waste time at the Code Smash event just installing tools on your
+Windows laptop, we've prepared a Virtual Machine which will give you our
+standard development setup.
+
+1. **Install VirtualBox and Vagrant**
    
    You will need to download and install [VirtualBox][virtualbox-download] and [Vagrant][vagrant-download]
 
-2. ##### Create and start the virtual machine
+2. **Start our virtual machine**
 
-   With these installed, you can start up the virtual machine using PowerShell, like so:
+   With these installed, you can start up ShopKeep's virtual machine using PowerShell:
 
-   ```
+   ```shell
    cd /path/to/simple-transaction-service
    vagrant up
    ```
 
    The first time you run this command, it will take some time as it needs to
-   download the base disk image for the VM.
+   download the OS.
 
-3. ##### Logging in and finding the code
+3. **Logging in**
 
-   The username and password for the Virtual Machine are both set to 'vagrant'.
+   The username and password for the virtual machine are both set to 'vagrant'.
 
    Once you have logged in, you will be able to find the project code like so:
 
-   ```
+   ```shell
    cd simple-transaction-service
    ```
 
-   You are now ready to work!
-
-   The [instructions below](#starting-the-app) give you the commands you need to
-   run to start up Rails.
+   You are now ready to work!  The [instructions below](#starting-the-app) give
+   you the commands you need to run to start up Rails.
    
-4. ##### Managing the virtual machine
+4. **Managing the virtual machine**
    You can start, stop and clean up the virtual machine using `vagrant` subcommands
 
    - Stopping: `vagrant halt`
@@ -50,26 +55,38 @@ edit code and view the results in your native OS.
 
    Destroying will completely remove the virtual machine and delete all disk images
    involved.
-   
-#### Linux
+
+---
+
+### <a name="linux"></a> Linux setup
+
 We recommend installing [RVM][rvm] over using or upgrading the system version of Ruby
 in order to avoid compatibility issues. To install, run the following line:
 
 `curl -sSL https://get.rvm.io | bash -s stable --ruby=2.1.1`
 
-RVM will select the correct version and prepare a gem set for your project
-automatically:
+RVM will select the correct Ruby version for your project automatically:
 
-```
+```shell
 $ cd /path/to/simple-transaction-service
 > ruby-2.1.1 - #gemset created /Users/barry/.rvm/gems/ruby-2.1.1@simple-transaction-service
 > ruby-2.1.1 - #generating simple-transaction-service wrappers - please wait
 ```
 
-#### Mac
-On OSX, you have the option of using native tools or the Vagrantfile provided.
+Finally, install [Bundler][bundler] to look after the Ruby gems (libraries):
 
-##### Native Install
+```shell
+$ gem install bundler
+```
+
+---
+
+### <a name="mac"></a> Mac setup
+
+On OSX, you have the option of using native tools or the Vagrant virtual machine provided.
+
+#### Native Install
+
 You will need to install [Homebrew][brew] if you haven't already:
 
 `ruby -e "$(curl -fsSL https://raw.github.com/Homebrew/homebrew/go/install)"`
@@ -78,25 +95,31 @@ And then RVM (See the Linux guide [above](#linux) )
 
 `curl -sSL https://get.rvm.io | bash -s stable --ruby=2.1.1`
 
-##### Vagrant
+#### Vagrant
 See the Windows guide [above](#windows)
 
-### Starting the App
+---
 
-1. Install the gems:
+### <a name="running_rails"></a> Starting your Rails application
 
-   ```
+1. Install the "gems" (Ruby libraries):
+
+   ```shell
    cd /path/to/simple-transaction-service
    bundle install
    ```
 
-2. Prepare the sqlite database:
+2. Prepare the database:
 
-   `bundle exec rake db:migrate`
+   ```shell
+   bundle exec rake db:migrate
+   ```
 
-3. Start rails:
+3. Start a Rails server:
 
-   `bundle exec rails s`
+   ```shell
+   bundle exec rails server
+   ```
 
 4. Visit `http://localhost:3000` in your browser
 
@@ -104,9 +127,11 @@ See the Windows guide [above](#windows)
    virtual machine, so the behaviour will be the same regardless of your setup.
 
 ### Running the Tests
+
 We have set the app up to use [RSpec][rspec], one of the most popular Ruby
-testing frameworks. You can find the test files in `spec/`, we will add more
-to get you started at the event.
+testing frameworks. You can find the test files in `spec/` ("specifications"),
+we will add more to get you started at the event. When the tests all pass, 
+you've passed!
 
 1. Prepare the test database
 
@@ -120,6 +145,7 @@ You can read some best practice on writing specs at [Better Specs][betterspecs]
 
 [rvm]: http://rvm.io
 [brew]: http://brew.sh
+[bundler]: http://bundler.io
 [virtualbox-download]: https://www.virtualbox.org/wiki/Downloads
 [vagrant-download]: http://www.vagrantup.com/downloads.html
 
