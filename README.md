@@ -2,7 +2,7 @@
 
 [ShopKeep][shopkeep] engineers work with a wide range of languages and tools to deliver
 great products to our customers. Our iPad register provides merchants with a
-beautiful, easy to use interface that integrates with a range of cloud-based
+beautiful, easy-to-use interface that integrates with a range of cloud-based
 services that provide long-term business value in terms of data management and
 reporting.
 
@@ -11,42 +11,38 @@ app using one of our core tools, [Ruby on Rails][rails].
 
 ### Taking Part
 
-If you'd like to take part in our Code Smash, please follow our short guide
-on getting set up.
+#### Learning about Ruby
 
-#### Getting Ready
-
-We are really passionate about [Ruby][ruby] development and are always looking
-for opportunities to meet developers who use or aspire to use it.
+We are really passionate about [Ruby][ruby] and [Rails][rails] development and
+are always looking for opportunities to meet developers who use or aspire to use it.
 
 You don't need to be an expert to take part and we will have some of our
 engineers standing by to help you get started, but if you want to prepare a
-little beforehand, here are some things to check out:
+little beforehand, here are some resources to check out:
 
-- [Try Ruby][tryruby]: Browser-based intro to the Ruby language
+- [Try Ruby][tryruby]: Browser-based intro to the [Ruby language][ruby]
 - [Code Academy's Ruby Course][codeacademy]: Exercises from introductory to advanced
-- [Ruby Koans][rubykoans]: Test-Driven approach to exploring Ruby, available online or for download
+- [Ruby Koans][rubykoans]: [Test Driven Development][tdd] approach to exploring Ruby, available online or for download
 - [Code School's Rails for Zombies][railsforzombies]: Introduction to Ruby on Rails in a series of video tutorials and exercises
 
 #### Sign up on GitHub
 
-We use GitHub to manage all our projects, we think its awesome, and it makes it
-very easy for you to share your solutions with us.
+We use the [git][git] source control tool and GitHub to manage all our projects.
+We think GitHub is awesome, and it makes it very easy for you to share your solutions with us.
 
-If you haven't already created an account, sign up for free [here][github-signup]
-and read GitHub's [bootcamp][github-bootcamp] for some tips on getting started.
+Sign up for free [here][github-signup] and read GitHub's [bootcamp][github-bootcamp]
+for some tips on getting started.
 
-__Note:__ You may be eligible to apply for an academic discount. If you are
-interested, please checkout out GitHub's [guide][github-academic-signup].
+(If you're considering upgrading to a paid account, check if you are  eligible for an [academic discount][github-academic-signup].)
 
 #### Fork the code
 
-Hit the 'Fork' button on the top right of the GitHub project page to make your
-own copy of the app that you can work on and submit at the end of the event.
+Hit the 'Fork' button on the top right of this page to make your
+own copy of the application that you can work on and submit at the end of
+ the event.
 
-If you're not familiar with command-line git, GitHub have clients for both
-[Windows][github-windows] and [Mac OS][github-mac] to help you manage your
-copy of the code.
+If you're not familiar with command-line [git][git] source control,
+ GitHub have clients for both [Windows][github-windows] and [Mac OS][github-mac].
 
 #### Prepare your development environment
 
@@ -67,8 +63,8 @@ See the [Getting Started](doc/GETTING_STARTED.md) guide for more information.
 
 #### Come meet us!
 
-Finally, head over to the Ground Floor Computer Science lab at 1pm on Wednesday
-the 30th of April to meet with some of our engineers and find out what you
+Finally, head over to the **Ground Floor Computer Science lab** at **1pm on Wednesday
+the 30th of April** to meet with some of our ShopKeep engineers and find out what you
 will be building.
 
 [shopkeep]: http://www.shopkeep.com  'ShopKeep POS'
@@ -81,6 +77,7 @@ will be building.
 [codeacademy]: http://www.codecademy.com/tracks/ruby 'Learn Ruby Programming'
 [railsforzombies]: http://railsforzombies.org 'Rails for Zombies'
 
+[git]: http://git-scm.com  'Git source control'
 [github-signup]: https://github.com/join 'Join GitHub'
 [github-academic-signup]: https://education.github.com 'GitHub Education'
 
@@ -89,5 +86,6 @@ will be building.
 [github-mac]: https://mac.github.com 'GitHub for Mac'
 
 [rvm]: http://rvm.io 'Ruby Version Manager'
+[tdd]: http://c2.com/cgi/wiki?TestDrivenDevelopment 'Test Driven Development'
 [vagrant]: http://www.vagrantup.com 'Vagrant'
 [virtualbox]: https://www.virtualbox.org 'VirtualBox'
