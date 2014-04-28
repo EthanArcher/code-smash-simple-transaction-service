@@ -3,7 +3,7 @@ SimpleTransactionService::Application.routes.draw do
 
   resources :sales, only: [:index, :show, :create]
   resources :receipts, only: [:show]
-  resources :reports, only: [] do
+  resource :reports, only: [] do
     get :total_sales
     get :sales_per_item
   end
