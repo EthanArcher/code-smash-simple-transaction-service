@@ -11,6 +11,8 @@ app using one of our core tools, [Ruby on Rails][rails].
 
 ### Taking Part
 
+The challenge is detailed on the home page of this Ruby on Rails web appliction. You'll see it when you run the server and visit the homepage in your browser. Follow the instructions that follow in order to get this application up and running on your machine.
+
 #### Learning about Ruby
 
 We are really passionate about [Ruby][ruby] and [Rails][rails] development and
