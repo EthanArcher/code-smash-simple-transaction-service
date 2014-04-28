@@ -10,5 +10,6 @@ gem 'highlight', :require => 'simplabs/highlight'
 gem 'json'
 
 group :development, :test do
+  gem 'pry'
   gem 'rspec-rails', '~> 2.14.2'
 end

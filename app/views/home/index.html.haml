@@ -49,4 +49,12 @@ We use #{link_to 'RSpec', 'http://rspec.info'} as our test tool. To run all our 
 
 %p When a specification fails, RSpec will tell you where the failing code is. You can then open the relevant server code in your favourite editor and get to work making the test pass!
 
-%p Good luck.
+%h3 ...I'm stuck! How do I debug?
+
+%p We've included a great debugger called #{link_to 'Pry', 'http://pryrepl.org'} in this setup. You can add a magic line to your tests or your server code, then execution of the tests will stop at that line and you can examine your variables, and run code interactively.
+
+%p To use Pry in a test: add the line 'binding.pry' before your suspect code.
+
+%p To use Pry in server code: add the line "require 'pry'" at the top of your file, then add the line 'binding.pry' before the suspect code.
+
+%p Don't forget to remove your Pry lines when submitting your finished solutions!
