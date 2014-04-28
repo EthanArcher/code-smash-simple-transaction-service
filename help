@@ -1,0 +1,11 @@
+#!/bin/bash
+
+echo "Feeling lost? Here's some advice:"
+echo ""
+echo "  * Read the files in the 'doc' directory."
+echo "  * Run 'rake -T' to get a list of build targets for this exercise"
+echo "    * If you start your server using 'rake' the index page you will"
+echo "      see in your browser on http://127.0.0.1:3000 will walk you"
+echo "      through the exercise."
+echo ""
+echo "Good luck!"
