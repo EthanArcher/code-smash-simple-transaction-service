@@ -6,8 +6,8 @@ describe 'Exercise 4: Reporting API - Presenting all Sales Data' do
     Sale.create!(
         total: 6.00,
         items: [
-          { name: 'soft drink', price: 1.50 },
-          { name: 'burger', price: 4.50 }
+          { 'name' => 'soft drink', 'price' => 1.50 },
+          { 'name' => 'burger', 'price' => 4.50 }
         ]
       )
   end
@@ -16,8 +16,8 @@ describe 'Exercise 4: Reporting API - Presenting all Sales Data' do
     Sale.create!(
       total: 6.50,
       items: [
-        { name: 'burger', price: 4.50 },
-        { name: 'chips', price: 2.00 }
+        { 'name' => 'burger', 'price' => 4.50 },
+        { 'name' => 'chips', 'price' => 2.00 }
       ]
     )
   end
@@ -26,7 +26,7 @@ describe 'Exercise 4: Reporting API - Presenting all Sales Data' do
     Sale.create!(
       total: 3.50,
       items: [
-        { name: 'burger', price: 4.50, discount: { reason: 'student discount', amount: 1.00 } }
+        { 'name' => 'burger', 'price' => 4.50, 'discount' => { 'reason' => 'student discount', 'amount' => 1.00 } }
       ]
     )
   end
@@ -35,11 +35,11 @@ describe 'Exercise 4: Reporting API - Presenting all Sales Data' do
     Sale.create!(
       total: 11.50,
       items: [
-        { name: 'soft drink', price: 1.50 },
-        { name: 'burger', price: 4.50, discount: { reason: 'meal deal', amount: 1.00 } },
-        { name: 'chips', price: 2.00, discount: { reason: 'meal deal', amount: 0.50 } },
-        { name: 'soft drink', price: 1.50 },
-        { name: 'burger', price: 4.50, discount: { reason: 'student discount', amount: 1.00 } }
+        { 'name' => 'soft drink', 'price' => 1.50 },
+        { 'name' => 'burger', 'price' => 4.50, 'discount' => { 'reason' => 'meal deal', 'amount' => 1.00 } },
+        { 'name' => 'chips', 'price' => 2.00, 'discount' => { 'reason' => 'meal deal', 'amount' => 0.50 } },
+        { 'name' => 'soft drink', 'price' => 1.50 },
+        { 'name' => 'burger', 'price' => 4.50, 'discount' => { 'reason' => 'student discount', 'amount' => 1.00 } }
       ]
     )
   end
@@ -64,15 +64,15 @@ describe 'Exercise 4: Reporting API - Presenting all Sales Data' do
     it { expect(response).to be_success }
 
     it "returns an object with a key for each item" do
-      expect(json.keys).to eql(['soft drink', 'chips', 'burger'])
+      expect(json.keys.sort).to eql(['soft drink', 'chips', 'burger'].sort)
     end
 
     it 'returns the correct number_of_sales for soft drinks' do
-      expect(json['soft drinks']['number_of_sales']).to eql(3)
+      expect(json['soft drink']['number_of_sales']).to eql(3)
     end
 
     it 'returns the correct total sales value for soft drinks' do
-      expect(json['soft drinks']['total']).to eql(4.50)
+      expect(json['soft drink']['total']).to eql(4.50)
     end
 
     it 'returns the correct number_of_sales for chips' do
