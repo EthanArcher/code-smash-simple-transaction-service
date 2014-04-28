@@ -2,7 +2,7 @@ require 'spec_helper'
 
 describe 'Exercise 2: Sales API - Discounted Transactions' do
 
-  describe 'create' do
+  describe '#create' do
     context 'with a discounted item' do
       before do
         post '/sales', {
@@ -24,12 +24,12 @@ describe 'Exercise 2: Sales API - Discounted Transactions' do
         expect(Sale.last).not_to be_nil
       end
 
-      it 'should return the total' do
-        expect(json['total']).to eql(3.50)
-      end
-
       it 'should return the new object id' do
         expect(json['id']).to eql(Sale.last.id)
+      end
+
+      it 'should return the total' do
+        expect(json['total']).to eql(3.50)
       end
     end
 
@@ -62,12 +62,12 @@ describe 'Exercise 2: Sales API - Discounted Transactions' do
         expect(Sale.last).not_to be_nil
       end
 
-      it 'should return the total' do
-        expect(json['total']).to eql(8.00)
-      end
-
       it 'should return the new object id' do
         expect(json['id']).to eql(Sale.last.id)
+      end
+
+      it 'should return the total' do
+        expect(json['total']).to eql(8.00)
       end
     end
   end

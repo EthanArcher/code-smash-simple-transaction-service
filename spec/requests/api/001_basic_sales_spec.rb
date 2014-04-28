@@ -2,7 +2,7 @@ require 'spec_helper'
 
 describe 'Exercise 1: Sales API - Basic Transactions' do
 
-  describe 'index' do
+  describe '#index' do
     context 'without sales in the database' do
       before { get '/sales' }
 
@@ -67,7 +67,7 @@ describe 'Exercise 1: Sales API - Basic Transactions' do
     end
   end
 
-  describe 'show' do
+  describe '#show' do
     let(:sale) {
       Sale.create(
         'total' => 6.00,
@@ -98,7 +98,7 @@ describe 'Exercise 1: Sales API - Basic Transactions' do
     end
   end
 
-  describe 'create' do
+  describe '#create' do
     before do
       post '/sales', {
         sale: {
@@ -112,8 +112,16 @@ describe 'Exercise 1: Sales API - Basic Transactions' do
 
     it { expect(response).to be_success }
 
-    it 'should return the total value of the created sale and its id' do
-      expect(json).to eql({ 'id' => Sale.last.id, 'total' => 6.00 })
+    it 'should save the sale to a database' do
+      expect(Sale.last).not_to be_nil
+    end
+
+    it 'should return the new object id' do
+      expect(json['id']).to eql(Sale.last.id)
+    end
+
+    it 'should return the total' do
+      expect(json['total']).to eql(6.00)
     end
   end
 end
