@@ -121,7 +121,7 @@ See the Windows guide [above](#windows)
    rake shopkeep:start
    ```
 
-4. Visit `http://localhost:3000` in your browser
+4. Visit `http://localhost:3000` in your browser - the details of the challenge should be displayed!
 
    __Note:__ We have configured Vagrant to forward port 3000 on the host to the
    virtual machine, so the behaviour will be the same regardless of your setup.
