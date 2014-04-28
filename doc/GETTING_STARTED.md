@@ -6,7 +6,7 @@ on your operating system:
   * [Mac](#mac)
   * [Linux](#linux)
 
-Then you can [run your Rails app](#running_rails). 
+Then you can [run your Rails app](#running_rails).
 
 ---
 ### <a name="windows"></a> Windows setup
@@ -18,7 +18,7 @@ Windows laptop, we've prepared a Virtual Machine which will give you our
 standard development setup.
 
 1. **Install VirtualBox and Vagrant**
-   
+
    You will need to download and install [VirtualBox][virtualbox-download] and [Vagrant][vagrant-download]
 
 2. **Start our virtual machine**
@@ -26,7 +26,7 @@ standard development setup.
    With these installed, you can start up ShopKeep's virtual machine using PowerShell:
 
    ```shell
-   cd /path/to/simple-transaction-service
+   cd /path/to/code-smash-simple-transaction-service
    vagrant up
    ```
 
@@ -40,12 +40,12 @@ standard development setup.
    Once you have logged in, you will be able to find the project code like so:
 
    ```shell
-   cd simple-transaction-service
+   cd code-smash-simple-transaction-service
    ```
 
    You are now ready to work!  The [instructions below](#starting-the-app) give
    you the commands you need to run to start up Rails.
-   
+
 4. **Managing the virtual machine**
    You can start, stop and clean up the virtual machine using `vagrant` subcommands
 
@@ -105,7 +105,7 @@ See the Windows guide [above](#windows)
 1. Install the "gems" (Ruby libraries):
 
    ```shell
-   cd /path/to/simple-transaction-service
+   cd /path/to/code-smash-simple-transaction-service
    bundle install
    ```
 
@@ -136,7 +136,7 @@ See the Windows guide [above](#windows)
 
 We have set the app up to use [RSpec][rspec], one of the most popular Ruby
 testing frameworks. You can find the test files in `spec/` ("specifications"),
-we will add more to get you started at the event. When the tests all pass, 
+we will add more to get you started at the event. When the tests all pass,
 you've passed!
 
 1. Prepare the test database
