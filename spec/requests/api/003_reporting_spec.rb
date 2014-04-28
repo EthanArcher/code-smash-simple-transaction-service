@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe 'Exercise 4: Reporting API - Presenting all Sales Data' do
+describe 'Exercise 3: Reporting API - Presenting all Sales Data' do
 
   let!(:sale_one) do
     Sale.create!(
