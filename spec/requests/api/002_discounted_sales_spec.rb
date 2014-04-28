@@ -6,12 +6,12 @@ describe 'Exercise 2: Sales API - Discounted Transactions' do
     context 'with a discounted item' do
       before do
         post '/sales', {
-          sale: {
-            items: [
+          'sale' => {
+            'items' => [
               {
-                name: 'burger',
-                price: 4.50,
-                discount: { reason: 'student discount', amount: 1.00 }
+                'name' => 'burger',
+                'price' => 4.50,
+                'discount' => { 'reason' => 'student discount', 'amount' => 1.00 }
               }
             ]
           }
@@ -36,20 +36,20 @@ describe 'Exercise 2: Sales API - Discounted Transactions' do
     context 'with a mix of discounted and non-discounted items' do
       before do
         post '/sales', {
-          sale: {
-            items: [
+          'sale' => {
+            'items' => [
               {
-                name: 'burger',
-                price: 4.50,
-                discount: { reason: 'student discount', amount: 1.00 }
+                'name' => 'burger',
+                'price' => 4.50,
+                'discount' => { 'reason' => 'student discount', 'amount' => 1.00 }
               },
               {
-                name: 'milkshake',
-                price: 2.50
+                'name' => 'milkshake',
+                'price' => 2.50
               },
               {
-                name: 'chips',
-                price: 2.00
+                'name' => 'chips',
+                'price' => 2.00
               }
             ]
           }

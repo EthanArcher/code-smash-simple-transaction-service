@@ -5,13 +5,13 @@ describe 'Exercise 3: Receipt API - Presenting a Sale Itemised along with Discou
   describe 'show' do
     let(:sale) {
       Sale.create!(
-        total: 12.50,
-        items: [
-          { name: 'soft drink', price: 1.50 },
-          { name: 'burger', price: 4.50, discount: { reason: 'meal deal', amount: 1.00 } },
-          { name: 'chips', price: 2.00, discount: { reason: 'meal deal', amount: 0.50 } },
-          { name: 'milkshake', price: 2.50 },
-          { name: 'burger', price: 4.50, discount: { reason: 'student discount', amount: 1.00 } }
+        'total' => 12.50,
+        'items' => [
+          { 'name' => 'soft drink', 'price' => 1.50 },
+          { 'name' => 'burger', 'price' => 4.50, 'discount' => { 'reason' => 'meal deal', 'amount' => 1.00 } },
+          { 'name' => 'chips', 'price' => 2.00, 'discount' => { 'reason' => 'meal deal', 'amount' => 0.50 } },
+          { 'name' => 'milkshake', 'price' => 2.50 },
+          { 'name' => 'burger', 'price' => 4.50, 'discount' => { 'reason' => 'student discount', 'amount' => 1.00 } }
         ]
       )
     }
