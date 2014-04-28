@@ -11,9 +11,7 @@ describe 'Exercise 2: Sales API - Discounted Transactions' do
               {
                 name: 'burger',
                 price: 4.50,
-                discount: {
-                  reason: 'student discount', amount: 1.00
-                }
+                discount: { reason: 'student discount', amount: 1.00 }
               }
             ]
           }
@@ -22,8 +20,16 @@ describe 'Exercise 2: Sales API - Discounted Transactions' do
 
       it { expect(response).to be_success }
 
-      it 'should return the total value of the created sale and its id' do
-        expect(json).to eql({ 'id' => Sale.last.id, 'total' => 3.50 })
+      it 'should save the sale to a database' do
+        expect(Sale.last).not_to be_nil
+      end
+
+      it 'should return the total' do
+        expect(json['total']).to eql(3.50)
+      end
+
+      it 'should return the new object id' do
+        expect(json['id']).to eql(Sale.last.id)
       end
     end
 
@@ -35,9 +41,7 @@ describe 'Exercise 2: Sales API - Discounted Transactions' do
               {
                 name: 'burger',
                 price: 4.50,
-                discount: {
-                  reason: 'student discount', amount: 1.00
-                }
+                discount: { reason: 'student discount', amount: 1.00 }
               },
               {
                 name: 'milkshake',
@@ -54,8 +58,16 @@ describe 'Exercise 2: Sales API - Discounted Transactions' do
 
       it { expect(response).to be_success }
 
-      it 'should return the total value of the created sale and its id' do
-        expect(json).to eql({ 'id' => Sale.last.id, 'total' => 8.00 })
+      it 'should save the sale to a database' do
+        expect(Sale.last).not_to be_nil
+      end
+
+      it 'should return the total' do
+        expect(json['total']).to eql(8.00)
+      end
+
+      it 'should return the new object id' do
+        expect(json['id']).to eql(Sale.last.id)
       end
     end
   end
