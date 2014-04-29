@@ -44,7 +44,7 @@ describe 'Exercise 3: Reporting API - Presenting all Sales Data' do
     )
   end
 
-  describe 'total_sales' do
+  describe '#total_sales' do
     before { get "/reports/total_sales" }
 
     it { expect(response).to be_success }
@@ -58,7 +58,7 @@ describe 'Exercise 3: Reporting API - Presenting all Sales Data' do
     end
   end
 
-  describe 'sales_per_item' do
+  describe '#sales_per_item' do
     before { get "/reports/sales_per_item" }
 
     it { expect(response).to be_success }
