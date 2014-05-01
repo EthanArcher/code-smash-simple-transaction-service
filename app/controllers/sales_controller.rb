@@ -1,7 +1,7 @@
 class SalesController < WebServiceController
 
   def index
-    sales = Sale.all?  #sales set to contain all sales
+    sales = Sale.all  #sales set to contain all sales
     render json: sales #render sales
     
   end
